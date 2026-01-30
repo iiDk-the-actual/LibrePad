@@ -38,6 +38,7 @@ namespace LibrePad
         void Awake()
         {
             CheckVersion();
+            Binding.GetBindFromFile(Directory.Exists(Binding.CFilePath) ? Binding.CFilePath : Binding.DFilePath);
 
             GameObject loader = new GameObject("LibrePad");
             DontDestroyOnLoad(loader);
