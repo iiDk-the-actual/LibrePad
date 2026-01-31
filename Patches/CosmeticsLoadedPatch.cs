@@ -33,7 +33,7 @@ namespace LibrePad.Patches
                 illegalMods.Add("Cosmetx");
 
             if (legalMods.Count > 0 || illegalMods.Count > 0)
-                Notifications.SendNotification($"<color={(illegalMods.Count > 0 ? "red" : "green")}>{(illegalMods.Count > 0 ? "Cheater" : "Modder")}</color> {__instance.playerNameVisible} has <color=green>{(legalMods.Count > 0 ? $"{legalMods.Count} mods" : "")}</color>{(legalMods.Count > 0 ? " and " : "")}<color=red>{(illegalMods.Count > 0 ? $"{illegalMods.Count} cheats" : "")}</color>");
+                Notifications.SendNotification($"<color={(illegalMods.Count > 0 ? "red" : "green")}>{(illegalMods.Count > 0 ? "Cheater" : "Modder")}</color> {__instance.playerNameVisible} has <color=green>{(legalMods.Count > 0 ? $"{legalMods.Count} mods" : "")}</color>{(legalMods.Count > 0 && illegalMods.Count > 0 ? " and " : "")}<color=red>{(illegalMods.Count > 0 ? $"{illegalMods.Count} cheats" : "")}</color>");
         }
     }
 }
