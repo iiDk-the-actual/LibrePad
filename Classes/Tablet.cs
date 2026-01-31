@@ -101,7 +101,7 @@ namespace LibrePad.Classes
         private bool previousLeftGrip;
         public void Update()
         {
-            bool leftGrip = ControllerInputPoller.instance.leftGrab;
+            bool leftGrip = Binding.Control(Binding.bind);
 
             if (leftGrip && !previousLeftGrip)
                 ui.SetActive(!ui.activeSelf);
